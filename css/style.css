@@ -1,21 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins",sans-serif;
 }
-
-body {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+body{
     min-height: 100vh;
-    background: url('cherry.jpg') no-repeat;
-    background-size: cover;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
     background-position: center;
-    
+        
+}
+.Section_top{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url('cherry.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 25s infinite ease-in-out;
+}  
+
+
+@keyframes change{
+    0%
+    {
+        background-image: url(cherry.jpg);
+    }
+    33%
+    {
+        background-image: url(war.jpg);
+    }
+    66%
+    {
+        background-image: url(redForest.jpg);
+    }
+    100%
+    {
+        background-image: url(cherry.jpg);
+    }
 }
 
 .wrapper {
@@ -26,6 +56,7 @@ body {
     color: #fff;
     border-radius: 10px;
     padding: 30px 40px;
+    align-self: center;
 }
 
 .wrapper h1 {
